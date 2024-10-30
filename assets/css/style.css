@@ -74,6 +74,8 @@ body {
     background-color: var(--body-color);
     color: var(--text-color);
     transition: background-color .4s;
+    position: relative;
+    top: 0;
 }
 
 h1,
@@ -725,13 +727,13 @@ img {
 
 /* =============================== FOOTER =============================== */
 .footer {
-    padding-block: 4rem 3rem;
+    padding-block: 4rem 1.5rem;
     color: var(--text-color);
 }
 
-.footer__container {
+/* .footer__container {
     row-gap: 3rem;
-}
+} */
 
 .footer__logo {
     display: inline-flex;
@@ -792,9 +794,8 @@ img {
 
 .footer__copy {
     display: block;
-    margin-top: 1.5rem;
     font-size: var(--smaller-font-size);
-    color: --text-color;
+    color: var(--text-color) ;
     font-weight: var(--font-semi-bold);
 }
 
@@ -809,6 +810,34 @@ img {
     border-radius: 5px;
 }
 
+/*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    top: 90%;
+    right: 10%;
+    background-color: var(--container-color);
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, .1);
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-flex;
+    font-size: 1.25rem;
+    padding: .4rem .8rem;   
+    color: var(--title-color);
+    transition: button .4s, transform .4s, background-color .4s;
+}
+
+.scrollup:hover {
+    transform: translateY(.3rem);
+}
+
+/* .scroll-click{
+    transform: translateY(-.5rem);
+} */
+
+/* Show Scroll Up */
+.show-scroll {
+    bottom: 6rem;
+}
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
     width: .6rem;
