@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ======================= VARIABLE ======================= */
+
+:root {
+    --header_height: 3.5rem;
+
+    /* =============== COLORS ================== */
+    --first-color: hsl(176, 88%, 27%);
+    --title-color: hsla(225, 58%, 10%, 1);
+    --text-color: hsla(219, 12%, 35%, 1);
+    --border-color: hsl(129, 36%, 85%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsla(0, 0%, 100%, 1);
+    --container-color: hsl(0, 0%, 97%);
+
+    /* =========== Font and Typography ============ */
+    /* --body-font: "Poppins", sans-serif; */
+    --body-font: "Rubik", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ============== Font weight ================ */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*================ z index ===================*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.1rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+}
+
+
+/* ======================= BASE ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input,
+button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: background-color .4s;
+    position: relative;
+    top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ======================= REUSABLE CSS CLASSES ======================= */
+.container {
+    max-width: 1220px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 5rem 1rem;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.section__title {
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 2rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+
+/* ======================= BUTTON ======================= */
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    border-radius: 25px;
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 1.5rem;
+    transition: box-shadow .4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 4px 32px hsla(24, 72%, 46%, 0.4);
+}
+
+
+/* =============================== HEADER & NAV =============================== */
+.header {
+    position: sticky;
+    width: 100%;
+    background-color: #E3E6F3;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    z-index: var(--z-fixed);
+    transition: background .4s;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.nav__logo,
+.nav__close,
+.nav__toggle {
+    display: flex;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.login-button {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        right: -100%;
+        background-color: var(--container-color);
+        width: 80%;
+        height: 100vh;
+        padding-block: 3.5rem;
+        transition: right .4s;
+        margin: -.5rem 0 0 0;
+    }
+}
+
+.nav__ul,
+.nav__action {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 0 0 0 2rem;
+}
+
+
+.nav__action {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.nav__link {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.nav__shopping-cart {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
+    cursor: pointer;
+}
+
+.nav__shopping-cart:hover {
+    color: var(--text-color);
+}
+
+.change-theme {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav__close {
+    position: absolute;
+    top: .5rem;
+    right: 1.5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.nav__last {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: .5rem;
+    top: 0;
+}
+
+.show-toggle {
+    right: 0;
+}
+
+/* Shadow header */
+.header {
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+}
+
+/* =============================== MAIN =============================== */
+.product__smaller__group {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.product__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 1rem;
+}
+
+.product__category {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.product__brand {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.product__price {
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.product__size{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 15rem;
+    gap: .8rem;
+}
+
+.product__size__button{
+    font-size: 14px;
+    font-weight: var(--font-medium);
+    padding: .5rem .8rem;
+    background-color: var(--white-color);
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--first-color);
+        color: var(--white-color);
+        border: 1px solid var(--first-color);
+        transition: ease-in .2s;
+    }
+}
+
+.addToCart__button{
+    padding: .7rem;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    border-radius: 5px;
+    border: 2px solid var(--first-color);
+     
+    &:hover{
+        cursor: pointer;
+        color: var(--first-color);
+        background-color: var(--white-color);
+        border: 2px solid var(--first-color);
+        transition: ease-in .3s;
+    }
+}
+
+.product__detail__head{
+    font-weight: var(--font-semi-bold);
+}
+
+/* =============================== FOOTER =============================== */
+.footer {
+    padding-block: 4rem 1.5rem;
+    color: var(--text-color);
+}
+
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--h3-font-size);
+    font-family: var(--second-font);
+    margin-bottom: 1.25rem;
+    color: var(--text-color);
+}
+
+.footer__logo i {
+    font-size: 1.25rem;
+}
+
+.footer__data {
+    grid-template-columns: auto auto;
+    gap: 3rem 3rem;
+}
+
+.footer__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.25rem;
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.footer__description {
+    margin: 1rem 0;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.footer__ul {
+    display: grid;
+    row-gap: .8rem;
+}
+
+.footer__li {
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+}
+
+.footer__info {
+    font-style: normal;
+}
+
+.footer__social {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.footer__social-links {
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+
+.footer__copy {
+    display: block;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.footer__icons {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.app__img {
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    right: 1.5rem;
+    bottom: -50%;
+    background-color: var(--container-color);
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, .1);
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    z-index: var(--z-tooltip);
+    transition: button .4s, transform .4s, background-color .4s;
+}
+
+.scrollup:hover {
+    transform: translateY(.3rem);
+}
+
+/* Show Scroll Up */
+.show-scroll {
+    bottom: 3rem;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(230, 16%, 85%);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: hsl(230, 16%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(230, 16%, 55%);
+}

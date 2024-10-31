@@ -45,12 +45,13 @@
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
     }
-
+    
 }
 
 
 /* ======================= BASE ======================= */
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -810,7 +811,6 @@ img {
     border-radius: 5px;
 }
 
-/*=============== SCROLL UP ===============*/
 /*=============== SCROLL UP ===============*/
 .scrollup {
     position: fixed;
