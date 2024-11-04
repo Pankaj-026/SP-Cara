@@ -285,7 +285,7 @@ img {
     font-weight: var(--font-semi-bold);
 }
 
-.product__brand {
+.product__brand__main {
     font-size: var(--biggest-font-size);
     font-weight: var(--font-semi-bold);
 }
@@ -525,6 +525,13 @@ img {
 .show-scroll {
     bottom: 3rem;
 }
+
+/* card border */
+.card-border{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {

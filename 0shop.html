@@ -14,6 +14,7 @@
     <!-- ======================= CSS ======================= -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/shopcss/0shop.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 
     <!-- ======================= TITLE ======================= -->
     <title>SpFashionista</title>
@@ -34,13 +35,13 @@
                 <ul class="nav__ul">
 
                     <li class="nav__list">
-                        <a href="#" class="nav__link">
+                        <a href="index.html" class="nav__link">
                             HOME
                         </a>
                     </li>
 
                     <li class="nav__list">
-                        <a href="#" class="nav__link">
+                        <a href="shop.html" class="nav__link">
                             SHOP
                         </a>
                     </li>
@@ -93,20 +94,20 @@
             <div class="product__container container grid">
                 <!-- #1 -->
                 <div class="product__images">
-                    <img src="assets/img/products/f1.jpg" alt="product">
+                    <img src="assets/img/products/f1.jpg" alt="product" id="main-img">
 
                     <div class="product__smaller__group">
                         <div class="product__smaller__group__column">
-                            <img src="assets/img/products/f1.jpg" alt="">
+                            <img src="assets/img/products/f1.jpg" alt="img" class='small__img'>
                         </div>
                         <div class="product__smaller__group__column">
-                            <img src="assets/img/products/f2.jpg" alt="">
+                            <img src="assets/img/products/f2.jpg" alt="" class='small__img'>
                         </div>
                         <div class="product__smaller__group__column">
-                            <img src="assets/img/products/f3.jpg" alt="">
+                            <img src="assets/img/products/f3.jpg" alt="" class='small__img'>
                         </div>
                         <div class="product__smaller__group__column">
-                            <img src="assets/img/products/f4.jpg" alt="">
+                            <img src="assets/img/products/f4.jpg" alt="" class='small__img'>
                         </div>
 
                     </div>
@@ -115,7 +116,7 @@
                 <!-- 2 -->
                 <div class="product__details">
                     <p class="product__category">T-shirt</p>
-                    <h1 class="product__brand">SP-Tiee</h1>
+                    <h1 class="product__brand__main">SP-Tiee</h1>
                     <span class="product__price">400/-</span>
 
                     <div class="product__size">
@@ -138,10 +139,10 @@
             </div>
         </section>
 
-        <!-- ======================= PRODUCT ======================= -->
-        <section class="section product" id="product">
+        <!-- ======================= NEW ARRIVAL ======================= -->
+        <section class="section New" id="product">
             <h1 class="product__title">
-                Features Products
+                New Arrivals
             </h1>
             <p class="product__description">
                 Summer Collection New Mordern Design
@@ -152,7 +153,7 @@
                 <!-- Article 1 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f1.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n1.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -176,7 +177,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f2.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n2.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -200,7 +201,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f3.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n3.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -224,7 +225,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f4.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n4.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -248,7 +249,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f5.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n5.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -272,7 +273,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f6.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n6.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -296,7 +297,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f7.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n7.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -320,7 +321,7 @@
                 <!-- Article 2 -->
                 <article class="product__card">
                     <div class="product__image">
-                        <img src="/assets/img/products/f8.jpg" alt="product" class="product__img">
+                        <img src="/assets/img/products/n8.jpg" alt="product" class="product__img">
                     </div>
                     <div class="product__data">
                         <span class="product__brand">
@@ -508,5 +509,22 @@
 </body>
 <!-- ======================= SCRIPT ======================= -->
 <script src="assets/js/script.js"></script>
+
+<script>
+    /* =============================== 0SHOP =============================== */
+
+    const mainImg = document.getElementById("main-img");
+    const smallImg = document.querySelectorAll(".small__img");
+
+    smallImg[0].classList.add('card-border')
+
+    smallImg.forEach(imgs => {
+        imgs.addEventListener('click', () => {
+            mainImg.src = imgs.src
+            smallImg.forEach(s => { s.classList.remove('card-border') })
+            imgs.classList.add('card-border')
+        })
+    })
+</script>
 
 </html>
