@@ -314,36 +314,32 @@ img {
     cursor: pointer;
     font-weight: var(--font-semi-bold);
 }
-
 /* =============================== FEATURES =============================== */
 .features__container {
+    display: grid;
     row-gap: 1.5rem;
     column-gap: .5rem;
-    grid-template-columns: repeat(2, max-content);
+    /* grid-template-columns: repeat(2,  max-content); */
+    grid-template-columns: repeat(2, minmax(135px, 1fr)); 
     margin-inline: 1rem;
 }
 
 .features__card {
     text-align: center;
     background-color: var(--container-color);
+    display: grid;
     padding: 1rem .5rem;
     overflow: hidden;
     border: 2px solid var(--border-color);
     border-radius: 5px;
-    box-shadow: 0px 5px 30px rgba(92, 107, 159, 0.4);
-    transition: box-shadow .4s;
-    transition: border .4s, background-color .4s;
+    box-shadow: 0px 3px 20px rgba(92, 107, 159, 0.4);
+    transition: box-shadow .4s, border .4s, background-color .4s;
     align-items: center;
-    display: grid;
 }
 
-.features__images {
-    display: flex;
-    justify-content: center;
-}
-
+/* Make images responsive */
 .features__img {
-    width: 120px;
+    max-width: 100%;
     margin: 0 auto 1.5rem;
 }
 
@@ -359,26 +355,22 @@ img {
     font-weight: var(--font-semi-bold);
 }
 
+/* Color variations for each card */
 .features__card:nth-child(2) h3 {
     background-color: #cdebbc;
 }
-
 .features__card:nth-child(3) h3 {
     background-color: #d1e8f2;
 }
-
 .features__card:nth-child(4) h3 {
     background-color: #cdd4f8;
 }
-
 .features__card:nth-child(5) h3 {
     background-color: #f6dbf6;
 }
-
 .features__card:nth-child(6) h3 {
     background-color: #fff2e5;
 }
-
 
 
 /* =============================== PRODUCT =============================== */
