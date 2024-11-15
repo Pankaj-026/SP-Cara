@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ======================= VARIABLE ======================= */
+
+:root {
+    --header_height: 3.5rem;
+
+    /* =============== COLORS ================== */
+    --first-color: hsl(176, 88%, 27%);
+    --title-color: hsla(225, 58%, 10%, 1);
+    --text-color: hsla(219, 12%, 35%, 1);
+    --border-color: hsl(129, 36%, 85%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsla(0, 0%, 100%, 1);
+    --container-color: hsl(0, 0%, 97%);
+
+    /* =========== Font and Typography ============ */
+    /* --body-font: "Poppins", sans-serif; */
+    --body-font: "Rubik", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ============== Font weight ================ */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*================ z index ===================*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.1rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+}
+
+/* ======================= HERO BANNER ======================= */
+.hero__banner {
+    background-image: url(/assets/img/about/banner.png);
+    height: 45vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 1% right 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.banner__head {
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+
+}
+
+.banner__description {
+    color: var(--white-color);
+    font-weight: var(--font-regular);
+    text-align: center;
+}
+
+/* ======================= MAP ======================= */
+.map {
+    padding-block: 5rem 1rem;
+}
+
+.map__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.map__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: .5rem;
+}
+
+.details__span {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+}
+
+.details__head {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.details__h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    padding-bottom: .5rem;
+}
+
+.details__address {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+
+/* ======================= FORM ======================= */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__container {
+    width: 100%;
+    margin: 2rem 1rem;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+}
+
+.details__form__head {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.details__para {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.details__submit {
+    padding: .5rem 1rem;
+    background-color: var(--first-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid var(--first-color);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--white-color);
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Review */
+
+.review__section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.review__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1rem;
+}
+
+.review__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.review__user {
+    font-size: var(--h3-font-size);
+    font-weight: var(--smaller-font-size);
+}
+
+.user__designation{
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+}
+
+.user__review{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+    color: var(--title-color);
+}

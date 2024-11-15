@@ -79,6 +79,7 @@
 .banner__description{
     color: var(--white-color);
     font-weight: var(--font-regular);
+    text-align: center;
 }
 
 
