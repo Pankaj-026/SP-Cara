@@ -17,77 +17,89 @@
     <!-- ======================= CSS ======================= -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- ======================= TITLE ======================= -->
     <title>Shop</title>
 </head>
 
 <body>
-    <header class="header" id="header">
-        <nav class="nav container">
 
-            <!-- LOGO -->
-            <a href="#" class="nav__logo">
-                <img src="assets/img/logo.png" alt="logo">
+  <!-- ======================= HEADER & NAV ======================= -->
+  <header class="header" id="header">
+    <nav class="nav container">
+
+        <!-- LOGO -->
+        <a href="#" class="nav__logo">
+            <img src="assets/img/logo.png" alt="logo">
+        </a>
+
+        <!-- Nav Menu -->
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__ul">
+
+                <li class="nav__list">
+                    <a href="index.html" class="nav__link">
+                        HOME
+                    </a>
+                </li>
+
+                <li class="nav__list">
+                    <a href="shop.html" class="nav__link">
+                        SHOP
+                    </a>
+                </li>
+
+                <li class="nav__list">
+                    <a href="blog.html" class="nav__link">
+                        BLOG
+                    </a>
+                </li>
+
+                <li class="nav__list">
+                    <a href="about.html" class="nav__link">
+                        ABOUT US
+                    </a>
+                </li>
+
+                <li class="nav__list">
+                    <a href="contact.html" class="nav__link">
+                        CONTACT US
+                    </a>
+                </li>
+
+                <li class="nav__list">
+                    <a href="cart.html" class="nav__shopping-cart2" id="nav-shopping-cart">
+                        <i class="ri-shopping-bag-3-line"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__last">
+
+            <!-- Shoping cart-->
+            <a href="cart.html" class="nav__shopping-cart" id="nav-shopping-cart">
+                <i class="ri-shopping-bag-3-line"></i>
             </a>
 
-            <!-- Nav Menu -->
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__ul">
-
-                    <li class="nav__list">
-                        <a href="index.html" class="nav__link">
-                            HOME
-                        </a>
-                    </li>
-
-                    <li class="nav__list">
-                        <a href="shop.html" class="nav__link">
-                            SHOP
-                        </a>
-                    </li>
-
-                    <li class="nav__list">
-                        <a href="#" class="nav__link">
-                            BLOG
-                        </a>
-                    </li>
-
-                    <li class="nav__list">
-                        <a href="#" class="nav__link">
-                            ABOUT US
-                        </a>
-                    </li>
-
-                    <li class="nav__list">
-                        <a href="#" class="nav__link">
-                            CONTACT US
-                        </a>
-                    </li>
-
-                </ul>
-
-                <!-- Close button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
+            <!-- toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
             </div>
 
-            <div class="nav__last">
+        </div>
+    </nav>
+</header>
 
-                <!-- Shoping cart-->
-                <a class="nav__shopping-cart" id="nav-shopping-cart">
-                    <i class="ri-shopping-bag-3-line"></i>
-                </a>
 
-                <!-- toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
 
-            </div>
-        </nav>
-    </header>
 
     <!-- ======================= MAIN ======================= -->
     <main class="main">
