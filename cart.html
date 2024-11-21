@@ -18,10 +18,10 @@
     <!-- ======================= CSS ======================= -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
 
     <!-- ======================= TITLE ======================= -->
-    <title>Contact</title>
+    <title>Cart</title>
 
 </head>
 
@@ -80,7 +80,7 @@
             <div class="nav__last">
 
                 <!-- Shoping cart-->
-                <a class="nav__shopping-cart" id="nav-shopping-cart">
+                <a class="nav__shopping-cart" id="nav-shopping-cart" href="cart.html">
                     <i class="ri-shopping-bag-3-line"></i>
                 </a>
 
@@ -100,146 +100,94 @@
         <section class="section hero__banner" id="hero-banner">
             <div class="banner__content container grid">
                 <h1 class="banner__head">
-                    #let's connect
+                    Your Cart
                 </h1>
-                <p class="banner__description">
-                    Leave a message, we would love to hear from you!
-                </p>
+                <!-- <p class="banner__description">
+                    Nothing in your cart
+                </p> -->
             </div>
         </section>
 
-        <!-- ======================= MAP ======================= -->
-        <section class="section map" id="map">
-            <div class="map__container container grid">
-
-                <div class="map__details">
-                    <p class="details__span">
-                        GET IN TOUCH
-                    </p>
-
-                    <h1 class="details__head">
-                        Visit one of our Outlet or contact us today
-                    </h1>
-
-                    <h3 class="details__h3">
-                        Head Office
-                    </h3>
-
-                    <ul class="details__address">
-                        <li class="details__item">
-                            <i class="ri-map-2-line"></i>
-                            106 Shaitan gully, near shamsanghat 9/11
-                        </li>
-                        <li class="details__item">
-                            <i class="ri-mail-line"></i>
-                            pankajgupta1063@gmail.com
-                        </li>
-                        <li class="details__item">
-                            <i class="ri-phone-fill"></i>
-                            +91 85912 72429
-                        </li>
-                        <li class="details__item">
-                            <i class="ri-time-line"></i>
-                            Monday to Saturday : 9 am to 10 pm
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="map__frame">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1885.2464596854556!2d72.83178771900536!3d19.086019902791342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9a1500fae2b%3A0x7118392f7d979fb0!2sL%20S%20Raheja%20College%20Of%20Arts%20%26%20Commerce%20Santacruz%2C%20STY%20Relief%20Rd%2C%20Shastri%20Nagar%2C%20Santacruz%20West%2C%20Mumbai%2C%20Maharashtra%20400054!5e0!3m2!1sen!2sin!4v1683983347522!5m2!1sen!2sin"
-                        width="250" height="350" frameborder="0" style="border:0; width: 100%;"
-                        allowfullscreen=""></iframe>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ======================= FORM ======================= -->
-        <section class="section form" id="form">
-            <div class="form__container container grid">
-                <div class="form__details">
-                    <h2 class="details__form__head">Leave a Message</h2>
-                    <p class="details__para">We love to hear from you</p>
-                    <form id="contactForm">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="E-mail" required>
-                        <input type="text" name="subject" placeholder="Subject" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="details__submit">Submit</button>
-                    </form>
-                </div>
-
-                <div class="review__section">
-
-                    <!-- card 1 -->
-                    <article class="review__card">
-                        <img src="assets/img/people/1.png" alt="user">
-                        <div class="review__details">
-
-                            <h3 class="review__user">
-                                Gold John
-                            </h3>
-                            <p class="user__designation">
-                                Senior Software Engineer
-                            </p>
-                            <p class="user__review">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
+        <!-- ======================= CART ======================= -->
+        <section class="section cart" id="cart">
+            <div class="cart-container container grid">
+                <h1>Shopping Cart</h1>
+                <div class="cart">
+                    <!-- Cart Items Section -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="assets/img/products/f1.jpg" alt="Product Image">
+                            <div class="item-details">
+                                <h3>Product Name</h3>
+                                <p>Price: ₹500</p>
+                                <div class="quantity-dropdown">
+                                    <label for="quantity1">Qty:</label>
+                                    <select id="quantity1" onchange="updateTotal()">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+                            </div>
                         </div>
-                    </article>
-
-                    <!-- card 2 -->
-                    <article class="review__card">
-                        <img src="assets/img/people/2.png" alt="user">
-                        <div class="review__details">
-
-                            <h3 class="review__user">
-                                Portugas Marks 
-                            </h3>
-                            <p class="user__designation">
-                                Founder CEO @DineSPace
-                            </p>
-                            <p class="user__review">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
+                        <!-- Add more cart items as needed -->
+                    </div>
+                    <!-- Cart Items Section -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="assets/img/products/f1.jpg" alt="Product Image">
+                            <div class="item-details">
+                                <h3>Product Name</h3>
+                                <p>Price: ₹500</p>
+                                <div class="quantity-dropdown">
+                                    <label for="quantity1">Qty:</label>
+                                    <select id="quantity1" onchange="updateTotal()">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+                            </div>
                         </div>
-                    </article>
-
-                    <!-- card 3 -->
-                    <article class="review__card">
-                        <img src="assets/img/people/3.png" alt="user">
-                        <div class="review__details">
-
-                            <h3 class="review__user">
-                                Vinsmoke Emma 
-                            </h3>
-                            <p class="user__designation">
-                                Senior Talent Aquisition
-                            </p>
-                            <p class="user__review">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
+                        <!-- Add more cart items as needed -->
+                    </div>
+                    <!-- Cart Items Section -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="assets/img/products/f1.jpg" alt="Product Image">
+                            <div class="item-details">
+                                <h3>Product Name</h3>
+                                <p>Price: ₹500</p>
+                                <div class="quantity-dropdown">
+                                    <label for="quantity1">Qty:</label>
+                                    <select id="quantity1" onchange="updateTotal()">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+                            </div>
                         </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+                        <!-- Add more cart items as needed -->
+                    </div>
 
-        <!-- ======================= NEWSLETTER ======================= -->
-        <section class="newsletter section" id="newsletter">
-            <div class="newsletter__container container grid">
-                <div class="newsletter__data">
-                    <h1 class="newsletter__head">
-                        Sign-up for newsletters
-                    </h1>
-                    <p class="newsletter__description">
-                        Get E-mail updates about our latest shop and special offers
-                    </p>
-                </div>
-                <div class="newsletter__email">
-                    <input type="text" placeholder="Enter your E-mail address" class="newsletter__emails">
-                    <button class="newsletter__button">Sign Up</button>
+                    <!-- Summary Section -->
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <p>Subtotal: ₹<span id="subtotal">500</span></p>
+                        <p>Delivery: ₹<span id="delivery">50</span></p>
+                        <h4>Total: ₹<span id="total">550</span></h4>
+                        <button class="checkout-btn">Proceed to Checkout</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -405,12 +353,23 @@
 <!-- ======================= SCRIPT ======================= -->
 <script src="assets/js/script.js"></script>
 <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevents form from submitting the traditional way
-         // Confirmation message
-        this.reset(); // Clears the form fields after submission
-    });
+    function updateTotal() {
+        const quantity = document.getElementById("quantity1").value;
+        const pricePerItem = 500;
+        const deliveryCharge = 50;
 
+        const subtotal = quantity * pricePerItem;
+        const total = subtotal + deliveryCharge;
+
+        document.getElementById("subtotal").textContent = subtotal;
+        document.getElementById("total").textContent = total;
+    }
+
+    function removeItem(button) {
+        const item = button.closest(".cart-item");
+        item.remove();
+        updateTotal();
+    }
 </script>
 
 </html>

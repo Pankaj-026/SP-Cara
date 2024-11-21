@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ======================= VARIABLE ======================= */
+
+:root {
+    --header_height: 3.5rem;
+
+    /* =============== COLORS ================== */
+    --first-color: hsl(176, 88%, 27%);
+    --title-color: hsla(225, 58%, 10%, 1);
+    --text-color: hsla(219, 12%, 35%, 1);
+    --border-color: hsl(129, 36%, 85%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsla(0, 0%, 100%, 1);
+    --container-color: hsl(0, 0%, 97%);
+
+    /* =========== Font and Typography ============ */
+    /* --body-font: "Poppins", sans-serif; */
+    --body-font: "Rubik", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ============== Font weight ================ */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*================ z index ===================*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.1rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+}
+
+/* ======================= HERO BANNER ======================= */
+.hero__banner {
+    background-image: url(/assets/img/about/banner.png);
+    height: 10vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 1% right 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.banner__head {
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+
+}
+
+.banner__description {
+    color: var(--white-color);
+    font-weight: var(--font-regular);
+    text-align: center;
+}
+
+/* ======================= CART ======================= */
+.cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items {
+    flex: 3;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.quantity-dropdown {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-dropdown label {
+    margin-right: 5px;
+}
+
+.quantity-dropdown select {
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.remove-btn {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+.cart-summary {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.cart-summary h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.cart-summary p,
+.cart-summary h4 {
+    margin: 10px 0;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
