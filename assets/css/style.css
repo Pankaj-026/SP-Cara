@@ -18,9 +18,9 @@
     /* --body-font: "Poppins", sans-serif; */
     --body-font: "Rubik", sans-serif;
     --biggest-font-size: 2rem;
-    --h1-font-size: 1.85rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.1rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.4rem;
+    --h3-font-size: 1.2rem;
     --normal-font-size: 1rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
@@ -37,12 +37,12 @@
 
 @media screen and (min-width: 1150px) {
     :root {
-        --biggest-font-size: 3.5rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.1rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
+        --biggest-font-size: 4.5rem;
+        --h1-font-size: 3.25rem;
+        --h2-font-size: 2.5rem;
+        --h3-font-size: 1.9rem;
+        --normal-font-size: 1.5rem;
+        --small-font-size: 1rem;
         --smaller-font-size: .813rem;
     }
 
@@ -199,6 +199,10 @@ img {
         transition: right .4s;
         margin: -.5rem 0 0 0;
     }
+
+    .nav__shopping-cart2 {
+        display: none;
+    }
 }
 
 .nav__ul,
@@ -229,10 +233,10 @@ img {
     font-weight: var(--font-medium);
     font-size: var(--h2-font-size);
     cursor: pointer;
-}
 
-.nav__shopping-cart:hover {
-    color: var(--text-color);
+    &:hover {
+        color: var(--text-color);
+    }
 }
 
 .change-theme {
@@ -301,7 +305,7 @@ img {
 
 .home__para {
     padding-bottom: 1rem;
-    font-size: .9rem;
+    font-size: var(--small-font-size);
 }
 
 .home__button {
@@ -859,9 +863,6 @@ img {
 /*==================== RESPONSIVE ====================*/
 /* For small devices */
 @media screen and (max-width: 320px) {
-    .container {
-        margin-inline: 1rem;
-    }
 
     .nav__menu {
         padding-inline: 3rem;
@@ -986,7 +987,7 @@ img {
 }
 
 @media screen and (min-width: 576px) {
-    :root {
+    /* :root {
         --biggest-font-size: 4rem;
         --h1-font-size: 2.5rem;
         --h2-font-size: 1.8rem;
@@ -994,7 +995,7 @@ img {
         --normal-font-size: 1.1rem;
         --small-font-size: .975rem;
         --smaller-font-size: .813rem;
-    }
+    } */
 
     .footer__data {
         grid-template-columns: repeat(3, auto);
@@ -1010,18 +1011,16 @@ img {
         grid-template-columns: repeat(2, minmax(135px, 1fr));
     }
 
-    .nav__last{
-        display: none;
-    }
-
-    .nav__ul{
+    .nav__ul {
         width: 100%;
         margin-top: 1rem;
         gap: 2rem;
     }
+
+
     /* .banner__container{
         grid-template-columns: ;
-    } */
+        } */
 }
 
 @media screen and (min-width: 765px) {
@@ -1035,18 +1034,66 @@ img {
         --smaller-font-size: .813rem;
     }
 
+    .nav__shopping-cart2 {
+        display: block;
+    }
+
     .nav__ul {
-        display: flex;
         flex-direction: row;
     }
 
     .nav__close,
-    .nav__toggle {
+    .nav__toggle,
+    .nav__last {
         display: none;
     }
 
     .footer__container {
         grid-template-columns: repeat(2, auto);
         justify-content: space-between;
+    }
+}
+
+
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 4.5rem;
+        --h1-font-size: 3.25rem;
+        --h2-font-size: 2.5rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.05rem;
+        --small-font-size: 1rem;
+        --smaller-font-size: .813rem;
+    }
+ 
+    .home{
+    background-position: top 35% right 80%;
+    }
+
+    .home__container{
+        margin: 6rem 7rem 0 8rem;
+    }
+
+    .features__container{
+        grid-template-columns: repeat(6, minmax(auto , 1fr));
+        margin: 3rem;
+        column-gap: 1.5rem;
+    }
+
+    .product__container {
+        grid-template-columns: repeat(4, minmax(135px, 1fr));
+    }
+
+    .footer{
+        margin-inline: 4rem;
+    }
+
+    .footer__data{
+        gap: 5rem;
+    }
+
+    .footer__copy{
+        text-align: center;
+        grid-column: span 2;
     }
 }
