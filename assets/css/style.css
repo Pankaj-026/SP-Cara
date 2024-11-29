@@ -1055,6 +1055,23 @@ img {
 }
 
 
+@media screen and (min-width: 900px) {
+    .home__container {
+        margin: 6rem 7rem 0 4rem;
+    }
+
+    .features__container {
+        grid-template-columns: repeat(6, minmax(auto, 1fr));
+        margin: 1rem;
+        column-gap: 1rem;
+    }
+
+    .product__container {
+        grid-template-columns: repeat(4, minmax(135px, 1fr));
+    }
+
+}
+
 @media screen and (min-width: 1150px) {
     :root {
         --biggest-font-size: 4.5rem;
@@ -1065,17 +1082,17 @@ img {
         --small-font-size: 1rem;
         --smaller-font-size: .813rem;
     }
- 
-    .home{
-    background-position: top 35% right 80%;
+
+    .home {
+        background-position: top 35% right 80%;
     }
 
-    .home__container{
+    .home__container {
         margin: 6rem 7rem 0 8rem;
     }
 
-    .features__container{
-        grid-template-columns: repeat(6, minmax(auto , 1fr));
+    .features__container {
+        grid-template-columns: repeat(6, minmax(auto, 1fr));
         margin: 3rem;
         column-gap: 1.5rem;
     }
@@ -1084,15 +1101,15 @@ img {
         grid-template-columns: repeat(4, minmax(135px, 1fr));
     }
 
-    .footer{
+    .footer {
         margin-inline: 4rem;
     }
 
-    .footer__data{
+    .footer__data {
         gap: 5rem;
     }
 
-    .footer__copy{
+    .footer__copy {
         text-align: center;
         grid-column: span 2;
     }
